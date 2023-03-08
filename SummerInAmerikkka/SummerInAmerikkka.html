@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body> 
+<h1> Some Memorables </h1>
+<h3> <span class="ital">Story of America</span> (TeJean Neal, 2020)</h3>
+	
+<div class="sideBySide">
+	
+</div>
+
+	
+<button type = "button" onClick="gotoMovie()" id="gotoMovie_btn"> Go to the movie</button>
+<div class="sideBySide">
+	
+<img class="filmStill" onClick="onClick_SIAII_text()"  src="images/SummerinA" alt="Summer In America Poster">
+<img class="filmStill" onClick="onClick_SIAPII_text()" src="images/SummerinA1" alt="Summer In America Poster by a tree">
+<img class="filmStill" onClick="onClick_SIAPFII_text()" src="images/SummerinA2jpeg.jpeg" alt="Summer in America Poster with a fist">
+</div>	
+	
+
+<p class="filmInfo" id="SIA_text"> "Summer in America" is featured in this year's Queens Underground Black and Brown Film festival in Jamaica, NY. In the weeks that I shot this film, it had been both the scariest and most invigorating moments of life. Part of the film captures the celebration of Juneteenth, while the other captures the 50 mm march to Madison. I remember the festival like it was yesterday. I was highly cross-faded by the time the march was over, and the activities had started, but I remembered the goal I had unquestionably. I wanted to capture the resiliency of black people, our love, our laughter, yall rhythm, our expression, etc. I wanted to create a comfortable space for us to exist without our trauma and injustice's glorifications. We as people should not only be highlighted/supported in response to the publicized violence done to us. We should be celebrated and supported for the amount of light and beauty we give to the world. While walking with 50 mm, there was a lot of passion and beautiful emotions, but there was also a lot of violence and hate thrown at us for merely existing. However, I didn't/ don't feel the need to show that because we already know it exists. Instead, I hope that when all of my black and brown comrades see this film, they can relax and rejoice because they see us with a happy ending.</p>
+	
+</body>
+<script>
+
+	
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+var SIA_text = document.getElementById("SIA_text");
+
+var SIA00 = " Summer in America is featured in this year's Queens Underground Black and Brown Film festival in Jamaica, NY. In the weeks that I shot this film, it had been both the scariest and most invigorating moments of life. Part of the film captures the celebration of Juneteenth, while the other captures the 50 mm march to Madison. I remember the festival like it was yesterday. I was highly cross-faded by the time the march was over, and the activities had started, but I remembered the goal I had unquestionably. I wanted to capture the resiliency of black people, our love, our laughter, yall rhythm, our expression, etc. I wanted to create a comfortable space for us to exist without our trauma and injustice's glorifications. We as people should not only be highlighted/supported in response to the publicized violence done to us. We should be celebrated and supported for the amount of light and beauty we give to the world. While walking with 50 mm, there was a lot of passion and beautiful emotions, but there was also a lot of violence and hate thrown at us for merely existing. However, I didn't/ don't feel the need to show that because we already know it exists. Instead, I hope that when all of my black and brown comrades see this film, they can relax and rejoice because they see us with a happy ending.";
+SIA_text.innerHTML = SIA00;
+		
+var SIA2020 = "Summer in America is a mix of media and perpsective between all the black marchers but specifally TeJean. This was done to give the film a natural relation to community, something TeJean wanted to strive for in he films aftermath";
+
+
+ 
+
+function onClick_SIA_text(){
+SIA_text.innerHTML = SIA2020;
+	
+}
+	
+function onClick_SIAP_text(){
+SIA_text.innerHTML = "Hiwot stands by a tree, destressing after a long trialing trip through rural Wisconsin. She's a fantastic leader.";
+}
+
+function onClick_SIAPF_text(){
+SIA_text.innerHTML = "TeJean and old friends sit and relax on the edge of a cliff after seven days of walking from Milwaukee to Madison in honor of black and brown trans youth and women.";
+}
+	
+	function onClick_SIAII_text(){
+		img01_clicked = true;
+console.log("img01_clicked = " + img01_clicked);
+revealButton();
+SIA_text.innerHTML ="Hiwot stands in Alice's Garden at the Juneteenth Celebration. What's wild is I didn't know them or their friends then. I just thought she was gorgeous and had to take her photo. Who knew we'd be running from the kkk and sleeping together on church floors in the community?";
+}
+	
+function onClick_SIAPII_text(){
+	img02_clicked = true;
+console.log("img02_clicked = " + img02_clicked);
+revealButton();
+SIA_text.innerHTML = "Hiwot stands by a tree, destressing after a long trialing trip through rural Wisconsin. She's an amazing leader. She's not the only one, though. 50 miles more as led by an array of spectacular black trans people and women";
+}
+
+function onClick_SIAPFII_text(){
+	img03_clicked = true;
+console.log("img03_clicked = " + img03_clicked);
+revealButton();
+SIA_text.innerHTML = "TeJean and their old friends are sitting and relaxing on the edge of a cliff seven days after walking from Milwaukee to Madison in honor of black and brown trans youth and women. Walking to the capitol to give our demands to democratic elected governor Tony Evers who refused to condemn bullets hitting protesters";
+}
+	
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+	
+}
+	
+function gotoMovie(){
+	window.open("https://vimeo.com/544768473","_blank");
+	
+}
+	
+</script>
+</html>
