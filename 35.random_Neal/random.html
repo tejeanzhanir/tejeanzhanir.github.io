@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/random.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="sideBySide">
+<img class="digitalImage" id="leftImage" onClick="randomizer(event)" src="image/Daffodils2.jpg" alt="Sytlized Political Photography shoot">
+<img class="digitalImage" id="middleImage" onClick="randomizer(event)" src="image/Daffodils4.jpg" alt="Sytlized Political Photography shoot">
+<img class="digitalImage" id="rightImage" onClick="randomizer(event)" src="image/Daffodils5.jpg" alt="Sytlized Political Photography shoot">		
+</div>	
+</body>
+<script>	
+function randomizer(event){
+	var x = Math.floor(Math.random() * 5) + 1;
+//	console.log("var x = " + x)
+	console.log(event.currentTarget.id);
+	if (x == 1){
+		event.currentTarget.src = Daffodils2;
+	}
+	if (x == 2){
+		event.currentTarget.src = Daffodils1;
+	}
+	if (x == 3){
+		event.currentTarget.src = Daffodils3;
+	}
+	if (x == 4){
+		event.currentTarget.src = Daffodils4;
+	}
+	if (x == 5){
+		event.currentTarget.src = Daffodils5;
+	}
+}
+	
+// elements that can change
+var leftImage = document.getElementById("leftImage");
+var middleImage = document.getElementById("middleImage");
+var rightImage = document.getElementById("rightImage");
+// list of images in the images folders
+var Daffodils1 = "image/Daffodils1.jpg";
+var Daffodils2 = "image/Daffodils2.jpg";
+var Daffodils3 = "image/Daffodils3.jpg";
+var Daffodils4 = "image/Daffodils4.jpg";
+var Daffodils5 = "image/Daffodils5.jpg";
+		
+		
+		
+</script>
+</html>
