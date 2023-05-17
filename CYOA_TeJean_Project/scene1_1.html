@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>**** PUT YOUR OWN TITLE HERE ****</title>
+<link href="css/CYOA_TeJean.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="projectDIV">
+		
+<p class="filmInfo" id="question" ondblclick="topText()" > Yeah like what is this is shit, I'm tired, everything is fucking tiring... Man fuck... <br/>
+	
+	
+	
+ <br/>
+	
+<br/> T.Neal
+	
+</p>	
+	
+<div id="DIVforButtons">	
+<p>	
+<p id="bottomText"> History young bhoul, you gotta look at the history, what's the <span id="clickable" onClick="gotoNewPage()"> history </span> of Blackness... Where did it come from ? When did it start? Do you know?  <br/>
+	
+<br/> F.Fanon
+</p>   
+</div>
+
+<script>
+	var question = document.getElementById("question");
+	var projectDIV = document.getElementById("projectDIV");
+	//projectDIV.style.display = "block";
+	
+	var bottomText = document.getElementById("bottomText");
+	bottomText.style.display = "none"; // this disappears the second line of text (a button)
+	
+
+	function topText(){
+		console.log("double click now works");
+		bottomText.style.display = "block"; // this makes the second line of text (a button) appear
+		question.style.display = "none"; 
+	}
+    
+	function gotoNewPage(){ // this function runs when the button is clicked
+		//question.innerHTML = "function for button is clicked"; // changes the innerHTML
+		console.log("gotoNewPage function is run");
+		window.open ('scene1_2.html','_self',false);
+	}
+
+     
+        
+</script>
+</div>    
+</body>
+</html>
+

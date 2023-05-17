@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>**** PUT YOUR OWN TITLE HERE ****</title>
+<link href="css/CYOA_TeJean.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- THE TITLE ABOVE THE VIDEO -->
+
+
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">    
+<video id="scene" preload="auto" controls>
+<source src="videos/CYOA.5.mov" type="video/mp4">
+</video>
+</div>
+
+
+
+<p  class="filmInfo" id="bottomText" ondblclick="gotoNewPage()"> 
+Who taught you to hate you to hate the race that you belong to?  <br/>
+	
+<br/>
+	
+- <br/>X. Malcolm
+	
+	
+</p>
+
+
+
+<script>
+
+    document.getElementById('scene').addEventListener('ended',whenVideoEnds,false);
+      var scene = document.getElementById("scene");
+	
+	
+	var bottomText = document.getElementById("bottomText");
+	bottomText.style.display = "none"; // this disappears the second line of text (a button)
+	
+	
+	
+	
+   function whenVideoEnds(){
+	   	scene.style.display = "none";
+		bottomText.style.display ="block";
+	}
+	
+            
+        
+	
+	function gotoNewPage(){ // this function runs when the button is clicked
+		//question.innerHTML = "function for button is clicked"; // changes the innerHTML
+		console.log("gotoNewPage function is run");
+		window.open ('scene4_1.html','_self',false);
+	
+	}
+	
+		var btn1 = document.getElementById("topButton");
+    var btn2 = document.getElementById("bottomButton"); 
+   
+    var caption = document.getElementById("caption");    
+
+     
+       
+  
+	
+
+	
+</script>
+    
+</body>
+</html>
+
+
+

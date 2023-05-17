@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>**** PUT YOUR OWN TITLE HERE ****</title>
+<link href="css/CYOA_TeJean.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="projectDIV">
+	
+	
+<p class="filmInfo" id="question" ondblclick="gotoNewPage()" > *mutters under breath* <br/>
+	
+..who taught me?  <br/>
+	
+ <br/>
+	
+<br/> - T.Neal
+	
+</p>	
+</div>
+
+	
+	
+	
+<script>
+	
+	
+	
+	function topText(){
+		console.log("double click now works");
+		scene.style.display = "block"; // this makes the second line of text (a button) appear
+		question.style.display = "none"; 
+		
+	}
+    
+	function gotoNewPage(){ // this function runs when the button is clicked
+		//question.innerHTML = "function for button is clicked"; // changes the innerHTML
+		console.log("gotoNewPage function is run");
+		window.open ('scene4_2.html','_self',false);
+	}
+
+     
+        
+</script>
+</div>    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>**** PUT YOUR OWN TITLE HERE ****</title>
+<link href="css/CYOA_TeJean.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="projectDIV">
+	
+	
+ <p class="filmInfo" id="question" ondblclick="topText()" > History?? Does it even matter. <br/>
+	 
+I'm doing all of this, working, grinding, and you wanna talk to me about history... ion need another lecture <br/>
+	
+	
+<br/> - T.Neal 
+</p>	
+	
+<div id="DIVforButtons">	
+<p>	
+<p id="bottomText">  and why is that, you got <span id="clickable" onClick="gotoNewPage()">  generations </span>upon generations of hardwork and grind in your dna with no rest, and you don't even know why?  <br/>
+	
+<br/>
+	
+ <br/> - F.Fanon
+	
+</p>
+</p>   
+</div>
+
+<script>
+	var question = document.getElementById("question");
+	var projectDIV = document.getElementById("projectDIV");
+	//projectDIV.style.display = "block";
+	
+	var bottomText = document.getElementById("bottomText");
+	bottomText.style.display = "none"; // this disappears the second line of text (a button)
+	
+
+	function topText(){
+		console.log("double click now works");
+		bottomText.style.display = "block"; // this makes the second line of text (a button) appear
+		question.style.display = "none"; 
+	}
+    
+	function gotoNewPage(){ // this function runs when the button is clicked
+		//question.innerHTML = "function for button is clicked"; // changes the innerHTML
+		console.log("gotoNewPage function is run");
+		window.open ('scene2_1.html','_self',false);
+	}
+
+     
+        
+</script>
+</div>    
+</body>
+</html>
